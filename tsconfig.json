@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "rootDir": "./src",            /* This tells TS where your code lives */
+    "outDir": "./dist",            /* This is where the runnable JS goes */
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "verbatimModuleSyntax": true  /* This is why we use 'import type' */
+  },
+  "include": ["src/**/*"]          /* This ensures TS looks inside 'src' */
+}
