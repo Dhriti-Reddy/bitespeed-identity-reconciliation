@@ -20,6 +20,9 @@ const app = express();
 const prisma = new PrismaClient();
 
 app.use(express.json());
+app.get('/', (req, res) => {
+    res.send("Bitespeed Service is Live!");
+});
 
 app.post('/identify', async (req: Request, res: Response) => {
     const { email, phoneNumber } = req.body;
@@ -126,5 +129,5 @@ function formatResponse(primary: Contact, all: Contact[]) {
     };
 }
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => console.log(`Server is listening on port ${PORT}`));
